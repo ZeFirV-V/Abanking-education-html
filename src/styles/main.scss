@@ -1,0 +1,40 @@
+@use './greeting.scss';
+@use './recent.scss';
+@use './featured.scss';
+@use './footer.scss';
+@use './header.scss';
+@use './nav.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding-right: 60px;
+  padding-left: 148px;
+}
