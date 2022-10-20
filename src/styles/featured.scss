@@ -18,45 +18,84 @@
   }
 
   &__item {
-    min-width: 858px;
+    max-width: 858px;
+    max-height: 195px;
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
   }
 
-  &__item_box {
+  &__item-box {
     display: grid;
-    grid-template-areas:
-        "my-img my-title my-title"
-        "my-img my-year my-subtitle"
-        "my-img my-text my-text"
-        "my-img my-text my-text";
+    grid-template-columns: 246px auto;
+    gap: 18px;
   }
 
-  &__img {
+  &__item-img {
     border-radius: 6px;
-    grid-area: my-img;
   }
 
-  &__text {
+  &__item-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: grid;
+    grid-template-columns: 62px auto;
+    grid-template-areas:
+        "my-header my-header"
+        "my-year my-subtitle"
+        "my-text my-text"
+        "my-text my-text";
+
+    color: #21243D;
+  }
+
+  &__content-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+
+    grid-area: my-header;
+
+    color: #21243D;
+  }
+
+  &__content-year {
+    width: 62px;
+    height: 25px;
+    left: 410px;
+    top: 1141px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #142850;
+    border-radius: 16px;
+    grid-area: my-year;
+  }
+
+  &__content-year-text {
+    font-weight: 900;
+    font-size: 18px;
+
+    color: #FFFFFF;
+  }
+
+  &__content-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    padding-left: 26px;
+
+
+    color: #8695A4;
+    grid-area: my-subtitle;
+  }
+
+  &__content-text {
+    grid-area: my-text;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 
     color: #21243D;
-    grid-area: my-text;
-  }
-
-  &__item_title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 44px;
-
-    grid-area: my-title;
-    margin-left: 18px;
-
-    color: #21243D;
-  }
-
-  &__item_text {
-    grid-area: my-text;
   }
 }
