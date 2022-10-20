@@ -7,11 +7,13 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 60px;
+    margin-bottom: 10px;
 
     color: #21243D;
   }
 
   &__list {
+    min-height: 702px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
@@ -20,7 +22,7 @@
   &__item {
     max-width: 858px;
     max-height: 195px;
-    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-bottom: 1px solid #E0E0E0;;
   }
 
   &__item-box {
