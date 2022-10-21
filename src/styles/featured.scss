@@ -22,7 +22,7 @@
 
   &__item {
     max-width: 858px;
-    max-height: 195px;
+    max-height: 205px;
     border-bottom: 1px solid #E0E0E0;;
   }
 
@@ -30,6 +30,11 @@
     display: grid;
     grid-template-columns: 246px auto;
     gap: 18px;
+
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__item-img {
@@ -41,12 +46,12 @@
     font-size: 16px;
     line-height: 24px;
     display: grid;
-    grid-template-columns: 62px auto;
+    grid-template-columns: 88px auto;
     grid-template-areas:
-        "my-header my-header"
-        "my-year my-subtitle"
-        "my-text my-text"
-        "my-text my-text";
+        "title title"
+        "year subtitle"
+        "text text"
+        "text text";
 
     color: #21243D;
   }
@@ -56,7 +61,7 @@
     font-size: 30px;
     line-height: 44px;
 
-    grid-area: my-header;
+    grid-area: title;
 
     color: #21243D;
   }
@@ -71,7 +76,7 @@
 
     background: #142850;
     border-radius: 16px;
-    grid-area: my-year;
+    grid-area: year;
   }
 
   &__content-year-text {
@@ -85,15 +90,14 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
-    padding-left: 26px;
 
 
     color: #8695A4;
-    grid-area: my-subtitle;
+    grid-area: subtitle;
   }
 
   &__content-text {
-    grid-area: my-text;
+    grid-area: text;
 
     font-weight: 400;
     font-size: 16px;
