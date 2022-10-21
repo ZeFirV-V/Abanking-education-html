@@ -28,8 +28,15 @@
 
   &__item-box {
     display: grid;
-    grid-template-columns: 246px auto;
-    gap: 18px;
+    grid-template-columns: 246px 70px auto;
+
+    grid-template-areas:
+        "img title title"
+        "img year subtitle"
+        "img text text"
+        "img text text";
+
+    column-gap: 18px;
 
     transition: opacity 0.3s ease;
     &:hover {
@@ -39,24 +46,10 @@
 
   &__item-img {
     border-radius: 6px;
+    grid-area: img;
   }
 
-  &__item-content {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: grid;
-    grid-template-columns: 88px auto;
-    grid-template-areas:
-        "title title"
-        "year subtitle"
-        "text text"
-        "text text";
-
-    color: #21243D;
-  }
-
-  &__content-title {
+  &__item-title {
     font-weight: 700;
     font-size: 30px;
     line-height: 44px;
@@ -66,7 +59,7 @@
     color: #21243D;
   }
 
-  &__content-year {
+  &__item-year {
     width: 62px;
     height: 25px;
     left: 410px;
@@ -79,14 +72,14 @@
     grid-area: year;
   }
 
-  &__content-year-text {
+  &__item-year-text {
     font-weight: 900;
     font-size: 18px;
 
     color: #FFFFFF;
   }
 
-  &__content-subtitle {
+  &__item-subtitle {
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
@@ -96,7 +89,7 @@
     grid-area: subtitle;
   }
 
-  &__content-text {
+  &__item-text {
     grid-area: text;
 
     font-weight: 400;

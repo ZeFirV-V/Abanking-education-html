@@ -31,6 +31,11 @@
     margin-bottom: 22px;
 
     color: #00A8CC;
+
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__list {
@@ -48,6 +53,11 @@
 
     background: #FFFFFF;
     border-radius: 4px;
+
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &__item-title {
